@@ -1,0 +1,127 @@
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f39c12;
+    --success-color: #2ecc71;
+    --danger-color: #e74c3c;
+    --bg-color: #f4f4f4;
+    --text-color: #333;
+    --container-bg: #fff;
+    --item-bg: #f9f9f9;
+    --button-bg: var(--primary-color);
+    --button-color: white;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode {
+    --primary-color: #3498db;
+    --secondary-color: #f1c40f;
+    --success-color: #27ae60;
+    --danger-color: #c0392b;
+    --bg-color: #2c3e50;
+    --text-color: #ecf0f1;
+    --container-bg: #34495e;
+    --item-bg: #2c3e50;
+    --button-bg: var(--primary-color);
+    --button-color: #ecf0f1;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    background-color: var(--container-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--shadow-color);
+}
+
+h1 {
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+    background-color: var(--item-bg);
+    color: var(--text-color);
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: var(--item-bg);
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: transform 0.2s;
+}
+
+li:hover {
+    transform: translateY(-2px);
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+#themeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--secondary-color);
+}
+
+button.edit {
+    background-color: var(--secondary-color);
+}
+
+button.delete {
+    background-color: var(--danger-color);
+}
+
+button.complete, button.undo {
+    background-color: var(--success-color);
+}
